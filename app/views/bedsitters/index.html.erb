@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bedsitters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Street</th>
+      <th>Residence</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bedsitters.each do |bedsitter| %>
+      <tr>
+        <td><%= bedsitter.type %></td>
+        <td><%= bedsitter.street %></td>
+        <td><%= bedsitter.residence %></td>
+        <td><%= link_to 'Show', bedsitter %></td>
+        <td><%= link_to 'Edit', edit_bedsitter_path(bedsitter) %></td>
+        <td><%= link_to 'Destroy', bedsitter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bedsitter', new_bedsitter_path %>

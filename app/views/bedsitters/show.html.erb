@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @bedsitter.type %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @bedsitter.street %>
+</p>
+
+<p>
+  <strong>Residence:</strong>
+  <%= @bedsitter.residence %>
+</p>
+
+<%= link_to 'Edit', edit_bedsitter_path(@bedsitter) %> |
+<%= link_to 'Back', bedsitters_path %>

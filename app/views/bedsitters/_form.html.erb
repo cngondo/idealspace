@@ -1,0 +1,29 @@
+<%= form_for(@bedsitter) do |f| %>
+  <% if @bedsitter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bedsitter.errors.count, "error") %> prohibited this bedsitter from being saved:</h2>
+
+      <ul>
+      <% @bedsitter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :street %><br>
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label :residence %><br>
+    <%= f.text_field :residence %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
