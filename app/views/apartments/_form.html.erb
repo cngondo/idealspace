@@ -10,11 +10,11 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :type %><br>
-    <%= f.text_field :type %>
-  </div>
+<form class="col s12">
+<div class="input-field col s12">
+  <label for="Space_type"> <%= f.label :type %><br> </label>
+  <input placeholder="Placeholder" type="text" class="validate" <%= f.text_field :type %> >      
+</div>
   <div class="field">
     <%= f.label :street %><br>
     <%= f.text_field :street %>
@@ -27,3 +27,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</form>

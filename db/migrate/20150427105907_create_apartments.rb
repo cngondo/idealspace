@@ -1,7 +1,7 @@
 class CreateApartments < ActiveRecord::Migration
   def change
     create_table :apartments do |t|
-      t.string :type
+      t.string :space_type
       t.string :street
       t.string :residence
 
